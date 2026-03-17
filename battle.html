@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Johnson vs Layla</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+font-family:Arial;
+color:white;
+text-align:center;
+}
+
+.container{
+width:340px;
+background:#111;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 20px black;
+}
+
+video{
+width:100%;
+border-radius:15px;
+}
+
+#legend{
+margin-top:20px;
+font-size:40px;
+color:gold;
+display:none;
+text-shadow:0 0 20px gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>⚔️ Johnson vs Layla</h2>
+
+<video id="battleVideo" controls>
+
+<source src="https://media.discordapp.net/attachments/1003318391500701799/1483520459445371094/YTDown.com_Shorts_Johnson-Run-Layla-Run-shorts-mlbb-layla_Media_aiBwXbjDb4E_001_1080p.mp4?ex=69bae398&is=69b99218&hm=681da812cddeef29c65c6e57fc0113974443af51ec035d35414769c1481e647f&" type="video/mp4">
+
+</video>
+
+<div id="legend">
+⚡ LEGENDARY ⚡ <br> JOHNSON
+</div>
+
+</div>
+
+<script>
+
+let video=document.getElementById("battleVideo");
+
+video.onended=function(){
+document.getElementById("legend").style.display="block";
+};
+
+</script>
+
+</body>
+</html>
