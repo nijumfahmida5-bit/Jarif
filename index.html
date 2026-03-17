@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jarif Ahsan</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+padding:20px;
+max-width:550px;
+}
+
+h1{
+font-size:38px;
+}
+
+#typing{
+font-size:18px;
+min-height:120px;
+}
+
+button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#ffd700;
+color:black;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.balloon{
+position:absolute;
+font-size:25px;
+animation:float 7s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh);opacity:0}
+100%{transform:translateY(-10vh);opacity:1}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉 Happy Birthday Jarif Ahsan 🎂</h1>
+
+<div id="typing"></div>
+
+<button onclick="startMatch()">Start Match 🎮</button>
+
+</div>
+
+<script>
+
+const text="Bad de bhuila gesi 😅 Rat 12 tar somoy to dui jone game a silam. Jhor aise current gese bhule gesi. Ar dineo kheyal nai. Ay akon Classic MM mari 🔥 Target lock korbo. Ai dukke 20+ death 😭 Happy Birthday bro 🎂 Kalke private sesh a dim ar ata gift divani 🎁";
+
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,40);
+}
+}
+
+type();
+
+function startMatch(){
+window.location.href="battle.html";
+}
+
+for(let i=0;i<25;i++){
+let b=document.createElement("div");
+b.innerHTML="🎈";
+b.classList.add("balloon");
+b.style.left=Math.random()*100+"vw";
+b.style.animationDuration=(4+Math.random()*6)+"s";
+document.body.appendChild(b);
+}
+
+</script>
+
+</body>
+</html>
